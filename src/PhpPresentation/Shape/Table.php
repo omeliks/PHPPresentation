@@ -58,6 +58,24 @@ class Table extends AbstractGraphic implements ComparableInterface
         // No resize proportional
         $this->resizeProportional = false;
     }
+    
+    /**
+     * Re-Create a new \PhpOffice\PhpPresentation\Shape\Table instance.
+     *
+     * @param int $columns Number of columns
+     */
+    public function reCreate($columns = 1)
+    {
+        // Initialise variables
+        $this->rows        = array();
+        $this->columnCount = $columns;  
+
+        // Initialize parent
+        parent::__construct();
+
+        // No resize proportional
+        $this->resizeProportional = false;
+    }
 
     /**
      * Get row.
